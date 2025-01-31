@@ -1,0 +1,242 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; }
+
+.background {
+    background-image: url('./img/mainbg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-button-main {
+    background-color: #6a0dad;
+    color: white;
+    border: 2px solid #000000;
+    padding: 20px 40px; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 20px; 
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    outline: none;
+    border-radius: 12px; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.content-button-main:hover {
+    background-color: #4b0082;
+    color: black;
+    transform: scale(1.08);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.content-button-main:active {
+    background-color: #800080;
+    transform: scale(0.98);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+    background-color: rgba(75, 0, 130, 0.8);
+    background-blend-mode: normal;
+    width: 35vw;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.6); 
+    border: 2px solid #9932CC;
+}
+
+.content-img-main {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+}
+
+.content-p-main {
+    font-size: 52px;
+    padding-bottom: 0;
+}
+
+.content-span-main {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E6E6FA;
+}
+
+/*flipp card ----------------------------*/
+
+.kartyak {
+    display: flex;
+    justify-content: center;          
+    align-items: center;
+    flex-wrap: wrap;                  
+    gap: 40px;                        
+    padding: 50px;
+    height: 100vh;                            
+}
+
+
+
+/* Flip-card beállítások */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+/* Ne nyúlj hozzá, animáció beállítások */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Hover effect */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Kártya alap */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Kártya előlap */
+.flip-card-front {
+    border: 2px solid #6a0dad;
+}
+
+/* Kártya hátlap */
+.flip-card-back {
+    background: #6a0dad;
+    color: white;
+    transform: rotateY(180deg);
+    border: 2px solid #6a0dad;
+    padding: 20px;
+}
+
+.Kcim{
+    font-size: 50px;
+
+}
+
+.Kiras{
+    font-size: 29px;
+}
+
+.Klink{
+    color: white;
+    font-size: 24px;
+}
+
+.Klink:hover{
+    color: black;
+    transform: scale(1.18);
+}
+
+
+/* Kép méretezés */
+.flip-card-front img {
+    width: 100%;
+    height: auto;
+}
+
+/*belepteto style*/
+
+.belepteto-forma form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.belepteto-forma input[type="text"],
+.belepteto-forma input[type="password"],
+.belepteto-forma input[type="email"] {
+    width: 100%;
+    padding: 9px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: 0.8px solid #ccc;
+    border-radius: 3.5px;
+    font-size: 15px;
+}
+
+.belepteto-forma input[type="text"]:focus,
+.belepteto-forma input[type="password"]:focus,
+.belepteto-forma input[type="email"]:focus {
+    outline: none;
+    border-color: #6a0dad;
+}
+
+
+.gomb-klink {
+    background-color: #6a0dad;
+    color: white;
+    border: 2px solid #000000;
+    padding: 20px 40px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px; 
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    outline: none;
+    border-radius: 12px; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.gomb-klink:hover {
+    background-color: #4b0082;
+    color: black;
+    transform: scale(1.08);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.gomb-klink:active {
+    background-color: #800080;
+    transform: scale(0.98);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
